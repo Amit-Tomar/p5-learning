@@ -1,5 +1,5 @@
 // https://github.com/processing/p5.js/issues/1339
-/// <reference path="../../p5.d/p5.d.ts" />
+/// <reference path="../../../p5.d/p5.d.ts" />
 
 export default function(P5) {
   P5.setup = () => {
