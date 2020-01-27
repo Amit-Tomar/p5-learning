@@ -39,6 +39,11 @@ export default function(P5) {
       ant.draw();
 
       ant.velocity = ant.velocity.add(ant.acceleration.mult(ant.timeTick));
+
+      if (ant.pos.x > P5.width) {
+        ant.velocity = P5.createVector(0, 0);
+        ant.acceleration = P5.createVector(0, 0);
+      }
     }
 
     universeTime = universeTime + 0.5;

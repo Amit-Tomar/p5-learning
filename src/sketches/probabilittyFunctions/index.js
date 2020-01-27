@@ -3,9 +3,6 @@
 
 export default function(P5) {
   const randomVarValues = Array(P5.windowWidth).fill(0);
-  //   for (let index = 0; index < P5.width; index++) {
-  //     randomVarValues[index] = 0;
-  //   }
 
   P5.setup = () => {
     P5.createCanvas(P5.windowWidth, P5.windowHeight);
