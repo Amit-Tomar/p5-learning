@@ -68,6 +68,12 @@ export function Vec2(x, y = undefined) {
     return Math.sqrt(Math.pow(this.x, 2) + Math.pow(this.y, 2));
   };
 
+  // Limits the Length of vector
+  this.limit = function(maxLength) {
+    if (this.length() > maxLength) this.setMagnitude(maxLength);
+    return this;
+  };
+
   // Rotate vector but theta ( in radians )
   this.rotate = function(theta) {
     return new Vec2(
@@ -87,6 +93,7 @@ export function Vec2(x, y = undefined) {
   };
 
   this.unitVectorAlongThisDirection = function() {
+    if (this.length() === 0) return new Vec2(0, 0);
     return new Vec2(this.x / this.length(), this.y / this.length());
   };
 
@@ -95,10 +102,7 @@ export function Vec2(x, y = undefined) {
   };
 
   this.setMagnitude = function(magnitude) {
-    const tempVec = this.normalize().mult(magnitude);
-    this.x = tempVec.x;
-    this.y = tempVec.y;
-    return this;
+    return this.normalize().mult(magnitude);
   };
 
   // Mid point on the line formed by this vector and given vector

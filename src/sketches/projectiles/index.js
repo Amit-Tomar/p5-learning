@@ -15,19 +15,19 @@ export default function(P5) {
     P5.noStroke();
 
     walker1 = new Walker();
-    walker1.acceleration.setMagnitude(0.1);
-    walker1.velocity.setMagnitude(5);
+    walker1.acceleration = walker1.acceleration.setMagnitude(0.1);
+    walker1.velocity = walker1.velocity.setMagnitude(5);
 
     walker2 = new Walker();
     walker2.acceleration = new Vec2(1, 0);
-    walker2.acceleration.setMagnitude(0.05);
-    walker2.velocity.setMagnitude(5);
+    walker2.acceleration = walker2.acceleration.setMagnitude(0.05);
+    walker2.velocity = walker2.velocity.setMagnitude(5);
 
     walker3 = new Walker();
     walker3.position = new Vec2(100, P5.windowHeight * 0.9);
     walker3.velocity = new Vec2(1, -1);
-    walker3.acceleration.setMagnitude(0.1);
-    walker3.velocity.setMagnitude(10);
+    walker3.acceleration = walker3.acceleration.setMagnitude(0.1);
+    walker3.velocity = walker3.velocity.setMagnitude(10);
   };
 
   P5.draw = () => {
