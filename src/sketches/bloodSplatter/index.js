@@ -1,9 +1,11 @@
-import { Vec2 } from "../../utils/Vector";
-
 // https://github.com/processing/p5.js/issues/1339
 /// <reference path="../../../p5.d/p5.d.ts" />
 
-export default function(P5) {
+import { Vec2 } from "../../utils/Vector";
+import React from "react";
+import P5Wrapper from "react-p5-wrapper";
+
+function bloodSplatter(P5) {
   P5.setup = () => {
     P5.createCanvas(P5.windowWidth, P5.windowHeight);
     P5.background("white");
@@ -40,4 +42,8 @@ export default function(P5) {
     console.log(clickPosFromScreenCenter);
     drawBloodPool(clickPosFromScreenCenter);
   };
+}
+
+export default function BloodSplatter() {
+  return <div className="sketch">{<P5Wrapper sketch={bloodSplatter} />}</div>;
 }

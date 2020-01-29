@@ -1,43 +1,38 @@
-import Home from "../components/Home";
-import Init from "../components/Init";
-import Ants from "../components/Ants";
-import BloodSplatter from "../components/BloodSplatter";
-import Forces from "../components/Forces";
-import MouseFollower from "../components/MouseFollower";
-import ProbabilityFunctions from "../components/ProbabilityFunctions";
-import Projectiles from "../components/Projectiles";
+import MouseFollowDraw from "../sketches/MouseFollowDraw";
+import Ants from "../sketches/Ants";
+import BloodSplatter from "../sketches/BloodSplatter";
+import GravityAndWind from "../sketches/GravityAndWind";
+import MouseAffinity from "../sketches/MouseAffinity";
+import ProbabilityFunctions from "../sketches/ProbabilityFunctions";
+import Projectiles from "../sketches/Projectiles";
 
 const routes = [
   {
-    path: `/`,
-    component: Home
+    path: `/MouseFollowDraw`,
+    component: MouseFollowDraw
   },
   {
-    path: `/${Init.name}`,
-    component: Init
-  },
-  {
-    path: `/${Ants.name}`,
+    path: `/Ants`,
     component: Ants
   },
   {
-    path: `/${BloodSplatter.name}`,
+    path: `/BloodSplatter`,
     component: BloodSplatter
   },
   {
-    path: `/${Forces.name}`,
-    component: Forces
+    path: `/GravityAndWind`,
+    component: GravityAndWind
   },
   {
-    path: `/${MouseFollower.name}`,
-    component: MouseFollower
+    path: `/MouseAffinity`,
+    component: MouseAffinity
   },
   {
-    path: `/${ProbabilityFunctions.name}`,
+    path: `/ProbabilityFunctions`,
     component: ProbabilityFunctions
   },
   {
-    path: `/${Projectiles.name}`,
+    path: `/Projectiles`,
     component: Projectiles
   }
 ];

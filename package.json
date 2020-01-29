@@ -2,6 +2,7 @@
   "name": "p5-learning",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://amit-tomar.github.io/P5",
   "dependencies": {
     "@material-ui/core": "^4.9.0",
     "@material-ui/icons": "^4.5.1",

@@ -9,7 +9,7 @@ function Init() {
       <ul>
         {routes.map((route, index) => (
           <li key={index}>
-            <Link to={route.path}>
+            <Link to={`component${route.path}`}>
               {route.path.substr(1, route.path.length) || "/"}
             </Link>
           </li>

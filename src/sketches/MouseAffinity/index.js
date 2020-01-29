@@ -2,8 +2,10 @@
 /// <reference path="../../../p5.d/p5.d.ts" />
 import Walker from "./Walker";
 import { Vec2 } from "../../utils/Vector";
+import React from "react";
+import P5Wrapper from "react-p5-wrapper";
 
-export default function(P5) {
+function mouseAffinity(P5) {
   let walker1 = null;
 
   P5.setup = () => {
@@ -11,7 +13,7 @@ export default function(P5) {
     P5.background("white");
     P5.noStroke();
 
-    walker1 = new Walker();
+    walker1 = new Walker(new Vec2(P5.width / 2, P5.height / 2));
     walker1.acceleration = walker1.acceleration.setMagnitude(0);
     walker1.velocity = walker1.velocity.setMagnitude(0);
   };
@@ -25,4 +27,8 @@ export default function(P5) {
     walker1.walk(P5);
     walker1.render(P5);
   };
+}
+
+export default function MouseAffinity() {
+  return <div className="sketch">{<P5Wrapper sketch={mouseAffinity} />}</div>;
 }

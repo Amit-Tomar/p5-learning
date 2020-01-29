@@ -1,11 +1,13 @@
 // https://github.com/processing/p5.js/issues/1339
 /// <reference path="../../../p5.d/p5.d.ts" />
 
-const maxAnts = 10;
-let universeTime = 1;
-let ants = [];
+import React from "react";
+import P5Wrapper from "react-p5-wrapper";
 
-export default function(P5) {
+function ants(P5) {
+  const maxAnts = 10;
+  let universeTime = 1;
+  let ants = [];
   P5.state = {};
 
   P5.setup = () => {
@@ -137,4 +139,8 @@ export default function(P5) {
       P5.text("Sugar", P5.mouseX - 20, P5.mouseY - 5);
     };
   }
+}
+
+export default function Ants() {
+  return <div className="sketch">{<P5Wrapper sketch={ants} />}</div>;
 }

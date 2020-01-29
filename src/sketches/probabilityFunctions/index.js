@@ -1,7 +1,10 @@
 // https://github.com/processing/p5.js/issues/1339
 /// <reference path="../../../p5.d/p5.d.ts" />
 
-export default function(P5) {
+import React from "react";
+import P5Wrapper from "react-p5-wrapper";
+
+function probabilityFunctions(P5) {
   const randomVarValues = Array(P5.windowWidth).fill(0);
 
   P5.setup = () => {
@@ -41,4 +44,10 @@ export default function(P5) {
     P5.fill(255, 0, 0, 20);
     P5.ellipse(xIndex, -P5.height / 2 + 40, 20);
   };
+}
+
+export default function ProbabilityFunctions() {
+  return (
+    <div className="sketch">{<P5Wrapper sketch={probabilityFunctions} />}</div>
+  );
 }

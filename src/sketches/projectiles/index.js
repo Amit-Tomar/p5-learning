@@ -3,7 +3,10 @@
 import Walker from "./Walker";
 import { Vec2 } from "../../utils/Vector";
 
-export default function(P5) {
+import React from "react";
+import P5Wrapper from "react-p5-wrapper";
+
+function projectiles(P5) {
   const tick = 1;
   let walker1 = null,
     walker2 = null,
@@ -46,4 +49,8 @@ export default function(P5) {
     walker3.walk(P5, tick);
     walker3.render(P5);
   };
+}
+
+export default function Projectiles() {
+  return <div className="sketch">{<P5Wrapper sketch={projectiles} />}</div>;
 }

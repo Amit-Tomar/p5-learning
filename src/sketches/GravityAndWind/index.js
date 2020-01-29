@@ -2,8 +2,10 @@
 /// <reference path="../../../p5.d/p5.d.ts" />
 import Walker from "./Walker";
 import { Vec2 } from "../../utils/Vector";
+import React from "react";
+import P5Wrapper from "react-p5-wrapper";
 
-export default function(P5) {
+function gravityAndWind(P5) {
   const tick = 1;
   let walkers = Array(10);
   let ballOnFloor = null;
@@ -51,4 +53,8 @@ export default function(P5) {
     ballOnFloor.edges(P5);
     ballOnFloor.render(P5);
   };
+}
+
+export default function GravityAndWind() {
+  return <div className="sketch">{<P5Wrapper sketch={gravityAndWind} />}</div>;
 }
