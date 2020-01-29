@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/p5-learning/static/css/main.00be4956.chunk.css",
+    "main.js": "/p5-learning/static/js/main.9b859ae5.chunk.js",
+    "main.js.map": "/p5-learning/static/js/main.9b859ae5.chunk.js.map",
+    "runtime-main.js": "/p5-learning/static/js/runtime-main.44098ba3.js",
+    "runtime-main.js.map": "/p5-learning/static/js/runtime-main.44098ba3.js.map",
+    "static/js/2.66c2c16c.chunk.js": "/p5-learning/static/js/2.66c2c16c.chunk.js",
+    "static/js/2.66c2c16c.chunk.js.map": "/p5-learning/static/js/2.66c2c16c.chunk.js.map",
+    "index.html": "/p5-learning/index.html",
+    "precache-manifest.ecebed8ae5e50507b5a53a36dcbbd77a.js": "/p5-learning/precache-manifest.ecebed8ae5e50507b5a53a36dcbbd77a.js",
+    "service-worker.js": "/p5-learning/service-worker.js",
+    "static/css/main.00be4956.chunk.css.map": "/p5-learning/static/css/main.00be4956.chunk.css.map",
+    "static/js/2.66c2c16c.chunk.js.LICENSE": "/p5-learning/static/js/2.66c2c16c.chunk.js.LICENSE"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.44098ba3.js",
+    "static/js/2.66c2c16c.chunk.js",
+    "static/css/main.00be4956.chunk.css",
+    "static/js/main.9b859ae5.chunk.js"
+  ]
+}
