@@ -17,7 +17,8 @@ export default class {
     );
     this.velocity = this.velocity.add(this.acceleration.mult(tick));
 
-    this.velocity.limit(5);
+    this.velocity = this.velocity.limit(0.1);
+    this.acceleration = this.acceleration.limit(0.05);
   };
 
   render = function(P5) {

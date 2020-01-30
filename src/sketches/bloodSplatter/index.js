@@ -39,7 +39,6 @@ function bloodSplatter(P5) {
     const clickPosFromScreenCenter = new Vec2(P5.mouseX, P5.mouseY).substract(
       new Vec2(P5.width / 2, P5.height / 2)
     );
-    console.log(clickPosFromScreenCenter);
     drawBloodPool(clickPosFromScreenCenter);
   };
 }

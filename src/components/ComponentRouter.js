@@ -4,8 +4,7 @@ import Button from "@material-ui/core/Button";
 
 import routes from "../routes/routes";
 
-function App({ match }) {
-  console.log(match);
+function ComponentRouter({ match }) {
   return (
     <Suspense fallback={<div>Loading..</div>}>
       {/* <Link style={{ position: "absolute" }} to="/P5">
@@ -28,4 +27,4 @@ function App({ match }) {
   );
 }
 
-export default App;
+export default ComponentRouter;

@@ -133,10 +133,19 @@ function ants(P5) {
 
       P5.pop();
       P5.fill("teal");
-      P5.rect(P5.mouseX, P5.mouseY - 10, 100, 25);
+      P5.rect(
+        P5.mouseX || P5.width / 2,
+        P5.mouseY ? P5.mouseY - 10 : P5.height / 2 - 10,
+        100,
+        25
+      );
       P5.textSize(15);
       P5.fill("white");
-      P5.text("Sugar", P5.mouseX - 20, P5.mouseY - 5);
+      P5.text(
+        "Sugar",
+        P5.mouseX ? P5.mouseX - 20 : P5.width / 2 - 20,
+        P5.mouseY ? P5.mouseY - 5 : P5.height / 2 - 5
+      );
     };
   }
 }

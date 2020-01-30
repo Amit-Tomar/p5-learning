@@ -1,22 +1,19 @@
-import React from "react";
-import "../../src/App.css";
 import routes from "../routes/routes";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
+import React from "react";
 
-function Init() {
+function Home() {
   return (
-    <div className="sketch">
-      <ul>
-        {routes.map((route, index) => (
-          <li key={index}>
-            <Link to={`component${route.path}`}>
-              {route.path.substr(1, route.path.length) || "/"}
-            </Link>
-          </li>
-        ))}
-      </ul>
-    </div>
+    <ul>
+      {routes.map((route, index) => (
+        <li key={index}>
+          <Link to={`component${route.path}`}>
+            {route.path.substr(1, route.path.length) || "/"}
+          </Link>
+        </li>
+      ))}
+    </ul>
   );
 }
 
-export default Init;
+export default Home;
