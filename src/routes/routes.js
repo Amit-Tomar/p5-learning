@@ -1,12 +1,13 @@
 import MouseFollowDraw from "../sketches/MouseFollowDraw";
 import Ants from "../sketches/Ants";
 import BloodSplatter from "../sketches/BloodSplatter";
-import GravityAndWind from "../sketches/GravityAndWind";
+import GravityWindAndFriction from "../sketches/GravityWindAndFriction";
 import MouseAffinity from "../sketches/MouseAffinity";
 import ProbabilityFunctions from "../sketches/ProbabilityFunctions";
 import Projectiles from "../sketches/Projectiles";
+import GravityAndDrag from "../sketches/GravityAndDrag";
 
-const routes = [
+let routes = [
   {
     path: `/MouseFollowDraw`,
     component: MouseFollowDraw
@@ -20,8 +21,12 @@ const routes = [
     component: BloodSplatter
   },
   {
-    path: `/GravityAndWind`,
-    component: GravityAndWind
+    path: `/GravityWindAndFriction`,
+    component: GravityWindAndFriction
+  },
+  {
+    path: `/GravityAndDrag`,
+    component: GravityAndDrag
   },
   {
     path: `/MouseAffinity`,
@@ -36,5 +41,9 @@ const routes = [
     component: Projectiles
   }
 ];
+
+routes = routes.sort((a, b) => a.path.localeCompare(b.path));
+
+console.log(routes);
 
 export default routes;

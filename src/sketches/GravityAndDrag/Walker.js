@@ -6,8 +6,7 @@ export default class {
     this.position = position;
     this.velocity = new Vec2(0, 0);
     this.acceleration = new Vec2(0, 0);
-
-    console.log(this.position);
+    this.radius = mass;
   }
 
   applyForce = function(force) {
@@ -29,7 +28,7 @@ export default class {
   };
 
   render = function(P5) {
-    P5.ellipse(this.position.x, this.position.y, this.mass);
+    P5.ellipse(this.position.x, this.position.y, this.radius);
   };
 
   edges = function(P5) {
