@@ -1,6 +1,6 @@
 // https://github.com/processing/p5.js/issues/1339
 /// <reference path="../../../p5.d/p5.d.ts" />
-import Planet from "./Planet";
+import SolarBodies from "./SolarBodies";
 import { Vec2 } from "../../utils/Vector";
 import React from "react";
 import P5Wrapper from "react-p5-wrapper";
@@ -16,14 +16,14 @@ function gravityAndWind(P5) {
     P5.noStroke();
 
     for (let index = 0; index < planets.length; index++) {
-      planets[index] = new Planet(
+      planets[index] = new SolarBodies(
         new Vec2(P5.random(10, P5.width), P5.random(10, P5.height / 4)),
         P5.random(5, 40)
       );
       planets[index].velocity = new Vec2(P5.random(-1, 1), P5.random(-1, 1));
     }
 
-    sun = new Planet(new Vec2(P5.width / 2, P5.height / 2), 100);
+    sun = new SolarBodies(new Vec2(P5.width / 2, P5.height / 2), 1000);
   };
 
   P5.draw = () => {
@@ -33,7 +33,7 @@ function gravityAndWind(P5) {
 
     P5.fill("red");
     planets.forEach(planet => {
-      const G = 0.1;
+      const G = 0.001;
       const distanceFromSun = P5.constrain(
         planet.position.distanceFrom(sun.position),
         5,
@@ -51,8 +51,11 @@ function gravityAndWind(P5) {
       planet.update(P5, tick);
       planet.edges(P5);
       planet.render(P5);
+
+      sun.applyForce(gravity.mult(-1));
     });
     P5.fill("orange");
+    sun.update(P5, tick);
     sun.render(P5);
   };
 }

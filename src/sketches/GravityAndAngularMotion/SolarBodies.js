@@ -39,8 +39,9 @@ export default class {
     P5.translate(this.position.x, this.position.y);
     P5.rotate(this.angularDisplacement);
     P5.rectMode(P5.CENTER);
-    P5.rect(0, 0, this.radius * 0.8, this.radius * 0.8);
-    P5.ellipse(0, 0, this.radius);
+    const drawingSize = P5.constrain(this.radius, 1, 50);
+    P5.rect(0, 0, drawingSize * 0.8, drawingSize * 0.8);
+    P5.ellipse(0, 0, drawingSize);
     P5.pop();
   };
 
