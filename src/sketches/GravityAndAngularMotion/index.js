@@ -9,6 +9,7 @@ function gravityAndWind(P5) {
   const tick = 1;
   let planets = Array(10);
   let sun = null;
+  const planetColors = [];
 
   P5.setup = () => {
     P5.createCanvas(P5.windowWidth, P5.windowHeight);
@@ -18,9 +19,10 @@ function gravityAndWind(P5) {
     for (let index = 0; index < planets.length; index++) {
       planets[index] = new SolarBodies(
         new Vec2(P5.random(10, P5.width), P5.random(10, P5.height / 4)),
-        P5.random(5, 40)
+        P5.random(10, 40)
       );
       planets[index].velocity = new Vec2(P5.random(-1, 1), P5.random(-1, 1));
+      //   planetColors.push(`rgb(255,0,${parseInt(P5.random(255))})`);
     }
 
     sun = new SolarBodies(new Vec2(P5.width / 2, P5.height / 2), 1000);
@@ -30,9 +32,12 @@ function gravityAndWind(P5) {
     P5.background("white");
 
     // G * m1 * m2 / r*r
+    const col = P5.random(50, 85);
+    P5.fill(col, col, col);
 
-    P5.fill("red");
-    planets.forEach(planet => {
+    planets.forEach((planet, index) => {
+      //   P5.fill(planetColors[index]);
+
       const G = 0.001;
       const distanceFromSun = P5.constrain(
         planet.position.distanceFrom(sun.position),
