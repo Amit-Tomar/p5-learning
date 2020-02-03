@@ -6,6 +6,7 @@ import MouseAffinity from "../sketches/MouseAffinity";
 import ProbabilityFunctions from "../sketches/ProbabilityFunctions";
 import Projectiles from "../sketches/Projectiles";
 import GravityAndDrag from "../sketches/GravityAndDrag";
+import GravityAndAngularMotion from "../sketches/GravityAndAngularMotion";
 
 let routes = [
   {
@@ -23,6 +24,10 @@ let routes = [
   {
     path: `/GravityWindAndFriction`,
     component: GravityWindAndFriction
+  },
+  {
+    path: `/GravityAndAngularMotion`,
+    component: GravityAndAngularMotion
   },
   {
     path: `/GravityAndDrag`,

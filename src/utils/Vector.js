@@ -171,6 +171,10 @@ export function Vec2(x, y = undefined) {
       this.y.toFixed(2) === inputVector.y.toFixed(2)
     );
   };
+
+  Vec2.nullVector = function() {
+    return new Vec2(0, 0);
+  };
 }
 
 export function Line(point1, point2) {
