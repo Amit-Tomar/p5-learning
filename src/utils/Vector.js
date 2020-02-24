@@ -70,8 +70,8 @@ export function Vec2(x, y = undefined) {
 
   // Limits the Length of vector
   this.limit = function(maxLength) {
-    if (this.length() > maxLength) this.setMagnitude(maxLength);
-    return this;
+    if (this.length() > maxLength) return this.setMagnitude(maxLength);
+    else return this;
   };
 
   // Rotate vector but theta ( in radians )

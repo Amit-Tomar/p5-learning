@@ -7,8 +7,13 @@ import ProbabilityFunctions from "../sketches/ProbabilityFunctions";
 import Projectiles from "../sketches/Projectiles";
 import GravityAndDrag from "../sketches/GravityAndDrag";
 import GravityAndAngularMotion from "../sketches/GravityAndAngularMotion";
+import Steering from "../sketches/Steering";
 
 let routes = [
+  {
+    path: `/Steering`,
+    component: Steering
+  },
   {
     path: `/MouseFollowDraw`,
     component: MouseFollowDraw
